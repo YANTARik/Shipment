@@ -3,3 +3,9 @@
 - Built in token authentication
 - CRUD
 
+# for start
+ - php atrisan migration
+ - php artisan db:seed
+ 
+ add new user
+
