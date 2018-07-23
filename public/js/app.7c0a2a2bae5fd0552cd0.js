@@ -13337,6 +13337,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -14226,8 +14231,8 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "shipment__list"
-  }, _vm._l((_vm.shipments), function(shipment) {
+    staticClass: "panel-body"
+  }, [_vm._l((_vm.shipments), function(shipment) {
     return _c('div', {
       staticClass: "shipment__item"
     }, [_c('router-link', {
@@ -14238,7 +14243,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('p', {
       staticClass: "shipment__name"
     }, [_vm._v(_vm._s(shipment.name))])])], 1)
-  }))
+  }), _vm._v(" "), (_vm.shipments.length) ? _c('div', {
+    staticClass: "panel-footer"
+  }, [_c('span', {
+    staticClass: "label label-default"
+  }, [_vm._v("You have " + _vm._s(_vm.shipments.length) + " Shipments ")])]) : _vm._e()], 2)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
