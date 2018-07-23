@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<div class="navbar">
+		<div class="navbar panel-heading">
 			<div class="navbar__brand">
 				<router-link to="/">Shipment Box</router-link>
 			</div>

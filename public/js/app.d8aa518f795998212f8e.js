@@ -13401,6 +13401,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -14030,7 +14035,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "container"
   }, [_c('div', {
-    staticClass: "navbar"
+    staticClass: "navbar panel-heading"
   }, [_c('div', {
     staticClass: "navbar__brand"
   }, [_c('router-link', {
@@ -14295,7 +14300,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "shipment__sub_title"
   }, [_vm._v("items")]), _vm._v(" "), _c('ul', _vm._l((_vm.shipment.items), function(item, i) {
     return _c('li', [_c('strong', [_vm._v("Item " + _vm._s(i + 1) + ": ")]), _vm._v(" "), _c('span', [_vm._v(_vm._s(item.code))]), _vm._v(" "), _c('span', [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c('span', [_vm._v(_vm._s(item.qty))])])
-  }))])])])])
+  }))]), _vm._v(" "), (_vm.shipment.items.length) ? _c('div', {
+    staticClass: "panel-footer"
+  }, [_c('span', {
+    staticClass: "label label-default"
+  }, [_vm._v("You have " + _vm._s(_vm.shipment.items.length) + " Items ")])]) : _vm._e()])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

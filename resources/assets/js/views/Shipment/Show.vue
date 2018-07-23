@@ -27,8 +27,13 @@
 						</li>
 					</ul>
 				</div>
+				<div class="panel-footer" v-if="shipment.items.length">
+		        <span class="label label-default">You have {{ shipment.items.length }} Items </span>         
+		        </div>
+				
 			</div>
 		</div>
+
 	</div>
 </template>
 <script type="text/javascript">
