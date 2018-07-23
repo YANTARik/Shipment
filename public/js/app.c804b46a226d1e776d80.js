@@ -13268,6 +13268,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -14481,11 +14482,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.addItem
     }
-  }, [_vm._v("Add item")])], 2)]), _vm._v(" "), (_vm.form.items.length) ? _c('div', {
+  }, [_vm._v("Add item")])], 2)])]), _vm._v(" "), (_vm.form.items.length) ? _c('div', {
     staticClass: "panel-footer"
   }, [_c('span', {
     staticClass: "label label-default"
-  }, [_vm._v("You have " + _vm._s(_vm.form.items.length) + " New Items ")])]) : _vm._e()])])
+  }, [_vm._v("You have " + _vm._s(_vm.form.items.length) + " New Items ")])]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
