@@ -13340,8 +13340,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -14304,7 +14302,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "panel-footer"
   }, [_c('span', {
     staticClass: "label label-default"
-  }, [_vm._v("You have " + _vm._s(_vm.shipment.items.length) + " Items ")])]) : _vm._e()])])])
+  }, [_vm._v("You have " + _vm._s(_vm.shipment.items.length) + " Items in this Shipment ")])]) : _vm._e()])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

@@ -28,9 +28,9 @@
 					</ul>
 				</div>
 				<div class="panel-footer" v-if="shipment.items.length">
-		        <span class="label label-default">You have {{ shipment.items.length }} Items </span>         
+		        	<span class="label label-default">You have {{ shipment.items.length }} Items in this Shipment </span>         
 		        </div>
-				
+
 			</div>
 		</div>
 
