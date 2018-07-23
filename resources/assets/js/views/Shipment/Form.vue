@@ -37,6 +37,9 @@
 					</div>
 					<button @click="addItem" class="btn">Add item</button>
 				</div>
+				<div class="panel-footer" v-if="form.items.length">
+        			<span class="label label-default">You have {{ form.items.length }} New Items </span> 
+        		</div>	
 			</div>
 		</div>
 	</div>
