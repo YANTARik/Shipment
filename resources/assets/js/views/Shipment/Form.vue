@@ -1,5 +1,5 @@
 <template>
-	<div class="shipment__show">
+	<div class="panel-body">
 		<div class="shipment__header">
 			<h3>{{action}} Shipment</h3>
 			<div>
@@ -35,12 +35,13 @@
 
 						<button @click="remove('items', index)" class="btn btn__danger">&times;</button>
 					</div>
-					<button @click="addItem" class="btn">Add item</button>
+					<button @click="addItem" class="btn btn-success pull-right">Add item</button>
 				</div>
-				<div class="panel-footer" v-if="form.items.length">
-        			<span class="label label-default">You have {{ form.items.length }} New Items </span> 
-        		</div>	
+				
 			</div>
+			<div class="panel-footer" v-if="form.items.length">
+        			<span class="label label-default">You have {{ form.items.length }} New Items </span> 
+        	</div>	
 		</div>
 	</div>
 </template>

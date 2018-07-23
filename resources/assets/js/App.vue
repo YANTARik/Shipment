@@ -1,31 +1,39 @@
 <template>
 	<div class="container">
-		<div class="navbar panel-heading">
-			<div class="navbar__brand">
-				<router-link to="/">Shipment Box</router-link>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="panel panel-default">
+					<div class="navbar panel-heading">
+					<div class="navbar__brand">
+						<router-link to="/">Shipment Box</router-link>
+					</div>
+					<ul class="navbar__list">
+						<li class="navbar__item"  v-if="guest">
+							<router-link to="/login">Login</router-link>
+						</li>
+						<li class="navbar__item"  v-if="guest">
+							<router-link to="/register">Register</router-link>
+						</li>
+						<li class="navbar__item"  v-if="auth">
+							<router-link to="/shipments/create">Create shipment</router-link>
+						</li>
+						<li class="navbar__item"  v-if="auth">
+							<a @click.stop="logout">Logout</a>
+						</li>
+					</ul>
+					</div>
+			
+					<div class="flash flash__error" v-if="flash.error">
+						{{flash.error}}
+					</div>
+					<div class="flash flash__success" v-if="flash.success">
+						{{flash.success}}
+					</div>
+					<router-view></router-view>
+					
+				</div>	
 			</div>
-			<ul class="navbar__list">
-				<li class="navbar__item"  v-if="guest">
-					<router-link to="/login">Login</router-link>
-				</li>
-				<li class="navbar__item"  v-if="guest">
-					<router-link to="/register">Register</router-link>
-				</li>
-				<li class="navbar__item"  v-if="auth">
-					<router-link to="/shipments/create">Create shipment</router-link>
-				</li>
-				<li class="navbar__item"  v-if="auth">
-					<a @click.stop="logout">Logout</a>
-				</li>
-			</ul>
 		</div>
-		<div class="flash flash__error" v-if="flash.error">
-			{{flash.error}}
-		</div>
-		<div class="flash flash__success" v-if="flash.success">
-			{{flash.success}}
-		</div>
-		<router-view></router-view>
 	</div>
 </template>
 <script type="text/javascript">

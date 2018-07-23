@@ -1,6 +1,6 @@
 <template>
 	<div class="panel-body">
-		<div class="shipment__item" v-for="shipment in shipments">
+		<div class="list-unstyled" v-for="shipment in shipments">
 			<router-link class="shipment__inner" :to="`/shipments/${shipment.id}`">
 				<p class="shipment__name">{{shipment.name}}</p>
 			</router-link>

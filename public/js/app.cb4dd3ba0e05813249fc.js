@@ -13001,6 +13001,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -13213,6 +13221,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__helpers_flash__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__helpers_api__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__helpers_form__ = __webpack_require__(40);
+//
 //
 //
 //
@@ -14036,6 +14045,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "container"
   }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-10 col-md-offset-1"
+  }, [_c('div', {
+    staticClass: "panel panel-default"
+  }, [_c('div', {
     staticClass: "navbar panel-heading"
   }, [_c('div', {
     staticClass: "navbar__brand"
@@ -14074,9 +14089,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("Logout")])]) : _vm._e()])]), _vm._v(" "), (_vm.flash.error) ? _c('div', {
     staticClass: "flash flash__error"
-  }, [_vm._v("\n\t\t" + _vm._s(_vm.flash.error) + "\n\t")]) : _vm._e(), _vm._v(" "), (_vm.flash.success) ? _c('div', {
+  }, [_vm._v("\n\t\t\t\t\t" + _vm._s(_vm.flash.error) + "\n\t\t\t\t")]) : _vm._e(), _vm._v(" "), (_vm.flash.success) ? _c('div', {
     staticClass: "flash flash__success"
-  }, [_vm._v("\n\t\t" + _vm._s(_vm.flash.success) + "\n\t")]) : _vm._e(), _vm._v(" "), _c('router-view')], 1)
+  }, [_vm._v("\n\t\t\t\t\t" + _vm._s(_vm.flash.success) + "\n\t\t\t\t")]) : _vm._e(), _vm._v(" "), _c('router-view')], 1)])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -14240,7 +14255,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "panel-body"
   }, [_vm._l((_vm.shipments), function(shipment) {
     return _c('div', {
-      staticClass: "shipment__item"
+      staticClass: "list-unstyled"
     }, [_c('router-link', {
       staticClass: "shipment__inner",
       attrs: {
@@ -14269,7 +14284,7 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "shipment__show"
+    staticClass: "panel-body"
   }, [_c('div', {
     staticClass: "shipment__row"
   }, [_c('div', {
@@ -14278,13 +14293,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "shipment__details_inner"
   }, [_c('small', [_vm._v("Submitted by: " + _vm._s(_vm.shipment.user.name))]), _vm._v(" "), _c('h1', {
     staticClass: "shipment__title"
-  }, [_vm._v(_vm._s(_vm.shipment.name))]), _vm._v(" "), (_vm.authState.api_token && _vm.authState.user_id === _vm.shipment.user_id) ? _c('div', [_c('router-link', {
+  }, [_vm._v(_vm._s(_vm.shipment.name))]), _vm._v(" "), (_vm.authState.api_token && _vm.authState.user_id === _vm.shipment.user_id) ? _c('div', {
+    staticClass: "pull-right"
+  }, [_c('router-link', {
     staticClass: "btn btn-primary",
     attrs: {
       "to": ("/shipments/" + (_vm.shipment.id) + "/edit")
     }
   }, [_vm._v("\n\t\t\t\t\t\tEdit\n\t\t\t\t\t")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn__danger",
+    staticClass: "btn btn-danger",
     attrs: {
       "disabled": _vm.isRemoving
     },
@@ -14299,7 +14316,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "shipment__box"
   }, [_c('h3', {
     staticClass: "shipment__sub_title"
-  }, [_vm._v("items")]), _vm._v(" "), _c('ul', _vm._l((_vm.shipment.items), function(item, i) {
+  }, [_vm._v("items")]), _vm._v(" "), _c('ul', {
+    staticClass: "list-unstyled"
+  }, _vm._l((_vm.shipment.items), function(item, i) {
     return _c('li', [_c('strong', [_vm._v("Item " + _vm._s(i + 1) + ": ")]), _vm._v(" "), _c('span', [_vm._v(_vm._s(item.code))]), _vm._v(" "), _c('span', [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c('span', [_vm._v(_vm._s(item.qty))])])
   }))]), _vm._v(" "), (_vm.shipment.items.length) ? _c('div', {
     staticClass: "panel-footer"
@@ -14321,7 +14340,7 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "shipment__show"
+    staticClass: "panel-body"
   }, [_c('div', {
     staticClass: "shipment__header"
   }, [_c('h3', [_vm._v(_vm._s(_vm.action) + " Shipment")]), _vm._v(" "), _c('div', [_c('button', {
@@ -14458,15 +14477,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }, [_vm._v("×")])])
   }), _vm._v(" "), _c('button', {
-    staticClass: "btn",
+    staticClass: "btn btn-success pull-right",
     on: {
       "click": _vm.addItem
     }
-  }, [_vm._v("Add item")])], 2), _vm._v(" "), (_vm.form.items.length) ? _c('div', {
+  }, [_vm._v("Add item")])], 2)]), _vm._v(" "), (_vm.form.items.length) ? _c('div', {
     staticClass: "panel-footer"
   }, [_c('span', {
     staticClass: "label label-default"
-  }, [_vm._v("You have " + _vm._s(_vm.form.items.length) + " New Items ")])]) : _vm._e()])])])
+  }, [_vm._v("You have " + _vm._s(_vm.form.items.length) + " New Items ")])]) : _vm._e()])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
